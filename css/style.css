@@ -16,7 +16,8 @@ $breakpoint arguement choices:
   --color-primary: #0b132b;
   --color-primary-light: #004E89;
   --color-grey-light: #f5fbef;
-  --color-grey-dark: #1a1c20; }
+  --color-grey-dark: #1a1c20;
+  --color-border-primary: #ced1df; }
 
 *,
 *::before,
@@ -28,6 +29,7 @@ $breakpoint arguement choices:
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  scroll-behavior: smooth;
   font-size: 62.5%; }
   @media only screen and (max-width: 75em) {
     html {
@@ -306,12 +308,14 @@ main {
     justify-self: center; }
   .stack__services {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     flex-wrap: wrap; }
   .stack__service-name {
-    border: 1px solid var(--color-primary-light);
+    border: 1px solid var(--color-border-primary);
     padding: 1rem 2.5rem;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    border-radius: 8px; }
 
 .projects__caption {
   text-align: center; }

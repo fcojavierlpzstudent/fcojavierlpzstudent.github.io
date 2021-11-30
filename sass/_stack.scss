@@ -44,13 +44,15 @@
 
   &__services {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     flex-wrap: wrap;
   }
 
   &__service-name {
-    border: 1px solid var(--color-primary-light);
+    border: 1px solid var(--color-border-primary);
     padding: 1rem 2.5rem;
     text-transform: uppercase;
+    letter-spacing: .1rem;
+    border-radius: 8px;
   }
 }
