@@ -1,0 +1,82 @@
+:root {
+  --color-primary: #0b132b;
+  --color-primary-light: #004E89;
+
+  --color-grey-light: #f5fbef;
+
+  --color-grey-dark: #1a1c20;
+}
+
+// FONT VARIABLES
+$font-primary: 'Poppins', sans-serif;
+
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em;   // 1200px
+$bp-large: 62.5em;   // 1000px
+$bp-medium: 50em;    // 800px;
+$bp-small: 37.5em;    // 600px;
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+
+    @media only screen and (max-width: $bp-large) {
+        font-size: 50%;
+    }
+
+    /* * {
+      outline: .1px solid #809BCE;
+    } */
+}
+
+button:focus {
+  outline: 0 !important;
+}
+
+button, a {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  margin: 0;
+}
+
+body {
+  font-family: $font-primary;
+  color: var(--color-grey-dark);
+  font-weight: 300;
+  line-height: 1.6;
+  min-height: 100vh;
+  position: relative;
+  background: var(--color-grey-light);
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 8rem repeat(2, min-content);
+  max-width: 112rem;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+main {
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+}

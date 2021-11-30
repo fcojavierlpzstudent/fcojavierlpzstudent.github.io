@@ -1,0 +1,29 @@
+.about {
+  display: flex;
+  gap: 5rem;
+
+  &__left {
+    min-inline-size: 45rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__right {
+    min-inline-size: 25rem;
+  }
+
+  &__photo {
+    max-block-size: 30rem;
+    min-block-size: 20rem;
+    block-size: 100%;
+    block-size: auto;
+    background-color: var(--color-primary);
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
+  }
+
+  button {
+    align-self: flex-start;
+  }
+}

@@ -1,0 +1,93 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+    link(href='https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600&display=swap' rel='stylesheet')
+    link(rel="stylesheet" href="css/style.css")
+    title Francisco J. López
+  body
+    .container
+      header.header
+        img(src='../img/logo.svg' alt='logo')
+        nav.nav
+          ul.nav__list
+            li.nav__list-item
+              a.link.link--nav(href='#about') Acerca
+            li.nav__list-item
+              a.link.link--nav(href='#stack') Stack
+            li.nav__list-item
+              a.link.link--nav(href='#projects') Proyectos
+            li.nav__list-item
+              a.link.link--nav(href='#contact') Contacto
+          button
+            svg.hide
+              use(xlink:href="../img/sprite.svg#moon")
+          button
+            svg
+              use(xlink:href="../img/sprite.svg#sun")
+
+      main
+        .about(id="about")
+          .about__left
+            h1.heading-jumbo.typing Hola Mundo...
+            p.paragraph-light
+              | Soy
+              span.heading-1  Francisco J. López
+              |  apasionado
+              span.heading-1.text-mark  Frontend Developer
+              |  Lorem ipsum dolor sit amet consectetur adipisicing Lorem ipsum dolor sit amet consectetur adipisicing
+            button.btn-grad Descargar CV
+          .about__right
+            .about__photo
+
+        .stack(id="stack")
+          h2.heading-3.stack__caption Stack
+
+          .stack__stack
+            .stack__route #Html
+            .stack__services
+              button.stack__service-name Semantic Html
+              button.stack__service-name Accessibility
+              button.stack__service-name SEO
+
+            .stack__route #Css
+            .stack__services
+              button.stack__service-name Responsign Design
+              button.stack__service-name Flexbox
+              button.stack__service-name Grid Layout
+              button.stack__service-name Preprocessors
+              button.stack__service-name Tailwind
+
+            .stack__route #Js
+            .stack__services
+              button.stack__service-name JavaScript
+              button.stack__service-name TypeScript
+              button.stack__service-name Vue
+               button.stack__service-name React
+
+
+        .projects(id="projects")
+          h2.heading-3.projects__caption Proyectos
+          .projects__cards
+            .card
+              .card__side.card__side--front
+                p Front Side
+              .card__side.card__side--back
+                p Back Side
+            .card
+              .card__side.card__side--front
+                p Front Side
+              .card__side.card__side--back
+                p Back Side
+            .card
+              .card__side.card__side--front
+                p Front Side
+              .card__side.card__side--back
+                p Back Side
+
+      footer(id="contact")
+        h2.heading-3.footer__caption Contacto

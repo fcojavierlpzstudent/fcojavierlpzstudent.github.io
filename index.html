@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Francisco J. López</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header"><img src="../img/logo.svg" alt="logo">
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__list-item"><a class="link link--nav" href="#about">Acerca</a></li>
+            <li class="nav__list-item"><a class="link link--nav" href="#stack">Stack</a></li>
+            <li class="nav__list-item"><a class="link link--nav" href="#projects">Proyectos</a></li>
+            <li class="nav__list-item"><a class="link link--nav" href="#contact">Contacto</a></li>
+          </ul>
+          <button>
+            <svg class="hide">
+              <use xlink:href="../img/sprite.svg#moon"></use>
+            </svg>
+          </button>
+          <button>
+            <svg>
+              <use xlink:href="../img/sprite.svg#sun"></use>
+            </svg>
+          </button>
+        </nav>
+      </header>
+      <main>
+        <div class="about" id="about">
+          <div class="about__left">
+            <h1 class="heading-jumbo typing">Hola Mundo...</h1>
+            <p class="paragraph-light">Soy<span class="heading-1"> Francisco J. López</span> apasionado<span class="heading-1 text-mark"> Frontend Developer</span> Lorem ipsum dolor sit amet consectetur adipisicing Lorem ipsum dolor sit amet consectetur adipisicing</p>
+            <button class="btn-grad">Descargar CV</button>
+          </div>
+          <div class="about__right">
+            <div class="about__photo"></div>
+          </div>
+        </div>
+        <div class="stack" id="stack">
+          <h2 class="heading-3 stack__caption">Stack</h2>
+          <div class="stack__stack">
+            <div class="stack__route">#Html</div>
+            <div class="stack__services">
+              <button class="stack__service-name">Semantic Html</button>
+              <button class="stack__service-name">Accessibility</button>
+              <button class="stack__service-name">SEO</button>
+            </div>
+            <div class="stack__route">#Css</div>
+            <div class="stack__services">
+              <button class="stack__service-name">Responsign Design</button>
+              <button class="stack__service-name">Flexbox</button>
+              <button class="stack__service-name">Grid Layout</button>
+              <button class="stack__service-name">Preprocessors</button>
+              <button class="stack__service-name">Tailwind</button>
+            </div>
+            <div class="stack__route">#Js</div>
+            <div class="stack__services">
+              <button class="stack__service-name">JavaScript</button>
+              <button class="stack__service-name">TypeScript</button>
+              <button class="stack__service-name">Vue
+                <button class="stack__service-name">React</button>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="projects" id="projects">
+          <h2 class="heading-3 projects__caption">Proyectos</h2>
+          <div class="projects__cards">
+            <div class="card">
+              <div class="card__side card__side--front">
+                <p>Front Side</p>
+              </div>
+              <div class="card__side card__side--back">
+                <p>Back Side</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__side card__side--front">
+                <p>Front Side</p>
+              </div>
+              <div class="card__side card__side--back">
+                <p>Back Side</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__side card__side--front">
+                <p>Front Side</p>
+              </div>
+              <div class="card__side card__side--back">
+                <p>Back Side</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer id="contact">
+        <h2 class="heading-3 footer__caption">Contacto</h2>
+      </footer>
+    </div>
+  </body>
+</html>
