@@ -1,3 +1,17 @@
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+*/
 :root {
   --color-primary: #0b132b;
   --color-primary-light: #004E89;
@@ -14,12 +28,16 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
-  /* * {
-      outline: .1px solid #809BCE;
-    } */ }
-  @media only screen and (max-width: 62.5em) {
+  font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
     html {
       font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 button:focus {
   outline: 0 !important; }
@@ -50,7 +68,8 @@ body {
   grid-template-rows: 8rem repeat(2, min-content);
   max-width: 112rem;
   margin: 0 auto;
-  min-height: 100vh; }
+  min-height: 100vh;
+  padding: 0 6rem; }
 
 main {
   margin-top: 10rem;
@@ -62,8 +81,14 @@ main {
   font-weight: 500; }
 
 .heading-jumbo {
-  font-size: 8rem;
+  font-size: 7rem;
   line-height: 1.5; }
+  @media only screen and (max-width: 56.25em) {
+    .heading-jumbo {
+      font-size: 6.5rem; } }
+  @media only screen and (max-width: 48em) {
+    .heading-jumbo {
+      font-size: 4.5rem; } }
 
 .heading-1 {
   font-size: 2.5rem;
@@ -91,6 +116,9 @@ main {
 .paragraph-light {
   font-size: 2.5rem;
   line-height: 3.9rem; }
+  @media only screen and (max-width: 56.25em) {
+    .paragraph-light {
+      font-size: 2rem; } }
 
 .typing {
   width: 13ch;
@@ -175,6 +203,9 @@ main {
     block-size: 4.5rem;
     vertical-align: middle;
     cursor: pointer; }
+    @media only screen and (max-width: 48em) {
+      .header img {
+        block-size: 2.5rem; } }
   .header .nav {
     display: flex;
     align-items: center;
@@ -185,6 +216,9 @@ main {
     .header .nav__list {
       display: flex;
       gap: 1.5rem; }
+      @media only screen and (max-width: 48em) {
+        .header .nav__list {
+          display: none; } }
     .header .nav__list-item {
       counter-increment: item 1; }
     .header .nav svg {
@@ -217,35 +251,51 @@ main {
 .about {
   display: flex;
   gap: 5rem; }
+  @media only screen and (max-width: 48em) {
+    .about {
+      gap: unset; } }
   .about__left {
     min-inline-size: 45rem;
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 1.5rem; }
-  .about__right {
-    min-inline-size: 25rem; }
-  .about__photo {
-    max-block-size: 30rem;
-    min-block-size: 20rem;
-    block-size: 100%;
-    block-size: auto;
-    background-color: var(--color-primary);
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+    @media only screen and (max-width: 48em) {
+      .about__left {
+        min-inline-size: unset; } }
+  @media only screen and (max-width: 48em) {
+    .about__photo {
+      display: none; } }
+  .about__photo img {
+    max-width: 25rem;
+    border-radius: 5px;
+    box-shadow: 6px 6px 10px 1px var(--color-primary-light); }
   .about button {
     align-self: flex-start; }
 
 .stack {
   display: flex;
   align-items: center; }
+  @media only screen and (max-width: 56.25em) {
+    .stack {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 3rem; } }
   .stack__caption {
     flex: 1; }
+    @media only screen and (max-width: 56.25em) {
+      .stack__caption {
+        align-self: center; } }
   .stack__stack {
     display: grid;
     inline-size: 60%;
     grid-template-columns: 10rem 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     column-gap: 1rem;
     row-gap: 3rem; }
+    @media only screen and (max-width: 56.25em) {
+      .stack__stack {
+        inline-size: 100%; } }
   .stack__route {
     font-size: 2rem;
     text-transform: uppercase;
@@ -269,8 +319,8 @@ main {
 
 .projects__cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 3rem; }
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 3rem; }
 
 .card {
   outline: 1px solid grey;

@@ -11,6 +11,10 @@
     block-size: 4.5rem;
     vertical-align: middle;
     cursor: pointer;
+
+    @include respond(phone) {
+      block-size: 2.5rem;
+    }
   }
 
   .nav {
@@ -26,6 +30,10 @@
     &__list {
       display: flex;
       gap: 1.5rem;
+
+      @include respond(phone) {
+        display: none;
+      }
     }
 
     &__list-item {

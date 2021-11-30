@@ -2,16 +2,31 @@
   display: flex;
   align-items: center;
 
+  @include respond(tab-port) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+
   &__caption {
     flex: 1;
+
+    @include respond(tab-port) {
+      align-self: center;
+    }
   }
 
   &__stack {
     display: grid;
     inline-size: 60%;
     grid-template-columns: 10rem 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     column-gap: 1rem;
     row-gap: 3rem;
+
+    @include respond(tab-port) {
+      inline-size: 100%;
+    }
   }
 
 
