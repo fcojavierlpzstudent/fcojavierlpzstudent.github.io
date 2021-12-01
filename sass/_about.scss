@@ -30,7 +30,8 @@
     }
   }
 
-  button {
+  &__download {
     align-self: flex-start;
+    text-decoration: none;
   }
 }

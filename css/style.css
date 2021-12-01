@@ -272,8 +272,9 @@ main {
     max-width: 25rem;
     border-radius: 5px;
     box-shadow: 6px 6px 10px 1px var(--color-primary-light); }
-  .about button {
-    align-self: flex-start; }
+  .about__download {
+    align-self: flex-start;
+    text-decoration: none; }
 
 .stack {
   display: flex;
