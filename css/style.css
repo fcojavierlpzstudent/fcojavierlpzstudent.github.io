@@ -87,14 +87,17 @@ main {
   line-height: 1.5; }
   @media only screen and (max-width: 56.25em) {
     .heading-jumbo {
-      font-size: 6.5rem; } }
+      font-size: 6rem; } }
   @media only screen and (max-width: 48em) {
     .heading-jumbo {
-      font-size: 4.5rem; } }
+      font-size: 4rem; } }
 
 .heading-1 {
   font-size: 2.5rem;
   line-height: 1; }
+  @media only screen and (max-width: 56.25em) {
+    .heading-1 {
+      font-size: 2rem; } }
 
 .heading-3 {
   font-size: 3.2rem;
@@ -121,6 +124,9 @@ main {
   @media only screen and (max-width: 56.25em) {
     .paragraph-light {
       font-size: 2rem; } }
+  @media only screen and (max-width: 48em) {
+    .paragraph-light {
+      font-size: 1.5rem; } }
 
 .typing {
   width: 13ch;
