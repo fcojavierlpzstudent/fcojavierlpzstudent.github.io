@@ -290,11 +290,10 @@ main {
       .stack__caption {
         align-self: center; } }
   .stack__stack {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     inline-size: 60%;
-    grid-template-columns: 10rem 1fr;
-    column-gap: 1rem;
-    row-gap: 3rem; }
+    gap: 3rem; }
     @media only screen and (max-width: 56.25em) {
       .stack__stack {
         inline-size: 100%; } }
