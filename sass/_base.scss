@@ -78,6 +78,15 @@ body {
   min-height: 100vh;
   padding: 0 6rem;
   gap: 10rem;
+
+
+  @include respond(tab-port) {
+    gap: 5rem;
+  }
+
+  @include respond(phone) {
+    gap: 4rem;
+  }
 }
 
 main {
