@@ -71,10 +71,10 @@ body {
   max-width: 112rem;
   margin: 0 auto;
   min-height: 100vh;
-  padding: 0 6rem; }
+  padding: 0 6rem;
+  gap: 10rem; }
 
 main {
-  margin-top: 10rem;
   display: flex;
   flex-direction: column;
   gap: 10rem; }
@@ -333,32 +333,17 @@ main {
 
 .card {
   outline: 1px solid grey;
-  perspective: 150rem;
-  -moz-perspective: 150rem;
-  position: relative;
-  height: 35rem;
-  font-size: 3.5rem; }
+  height: 30rem;
+  font-size: 3rem; }
   .card__side {
-    height: 35rem;
-    border-radius: .3rem;
-    transition: all .8s ease;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
     overflow: hidden;
-    box-shadow: 0 1.5rem 4rem rgba(11, 19, 43, 0.15);
     padding: 2rem; }
     .card__side--front {
       background-color: var(--color-grey-light); }
-    .card__side--back {
-      transform: rotateY(180deg); }
   .card:hover .card__side--front {
     transform: rotateY(-180deg); }
-  .card:hover .card__side--back {
-    transform: rotateY(0); }
 
-footer {
+.footer {
   min-height: 10rem; }
+  .footer__caption {
+    text-align: center; }

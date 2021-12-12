@@ -1,3 +1,7 @@
-footer {
+.footer {
   min-height: 10rem;
+
+  &__caption {
+    text-align: center;
+  }
 }
