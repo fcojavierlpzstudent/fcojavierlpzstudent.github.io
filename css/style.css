@@ -17,7 +17,8 @@ $breakpoint arguement choices:
   --color-primary-light: #004E89;
   --color-grey-light: #f5fbef;
   --color-grey-dark: #1a1c20;
-  --color-border-primary: #ced1df; }
+  --color-border-primary: #ced1df;
+  --color-error: #ff3333; }
 
 *,
 *::before,
@@ -337,16 +338,76 @@ main {
 .card {
   outline: 1px solid grey;
   height: 30rem;
-  font-size: 3rem; }
-  .card__side {
-    overflow: hidden;
-    padding: 2rem; }
-    .card__side--front {
-      background-color: var(--color-grey-light); }
-  .card:hover .card__side--front {
-    transform: rotateY(-180deg); }
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .card__header {
+    display: flex;
+    justify-content: flex-end; }
+  .card__content {
+    display: flex;
+    flex-direction: column; }
+  .card__title {
+    font-weight: bold; }
+  .card__body {
+    margin-top: 1rem; }
+  .card__footer {
+    display: flex; }
+    .card__footer ul {
+      display: flex;
+      list-style: none;
+      gap: 1rem;
+      color: grey;
+      font-weight: 500; }
 
 .footer {
   min-height: 10rem; }
   .footer__caption {
     text-align: center; }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 4rem;
+  align-items: center; }
+  .form .form__group {
+    display: flex;
+    flex-direction: column;
+    width: 65rem; }
+  .form__input {
+    font-size: 1.4rem;
+    font-family: inherit;
+    font-weight: 300;
+    color: var(--color-grey-dark);
+    padding: 1.2rem 2rem;
+    border-radius: 4px;
+    background-color: var(--color-grey-light);
+    border: 1px solid var(--color-border-primary);
+    border-bottom: 3px solid var(--color-border-primary);
+    display: block;
+    transition: all 0.3s; }
+    .form__input:focus {
+      outline: none;
+      border-bottom: 3px solid var(--color-primary); }
+    .form__input:focus:invalid {
+      border-bottom: 3px solid var(--color-error); }
+    .form__input::-webkit-input-placeholder {
+      color: var(--color-grey-dark); }
+  .form__label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-left: 2rem;
+    margin-top: 0.7rem;
+    display: block;
+    transition: all 0.3s; }
+  .form__input:placeholder-shown + .form__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem); }
+  .form textarea {
+    height: 20rem;
+    overflow-y: auto;
+    resize: none; }
