@@ -11,78 +11,13 @@ html(lang="en")
     title Francisco J. López
   body
     .container
-      header.header
-        img(src='../img/logo.svg' alt='logo')
-        nav.nav
-          ul.nav__list
-            li.nav__list-item
-              a.link.link--nav(href='#stack') Stack
-            li.nav__list-item
-              a.link.link--nav(href='#projects') Proyectos
-            li.nav__list-item
-              a.link.link--nav(href='#contact') Contacto
-          button
-            svg.hide
-              use(xlink:href="../img/sprite.svg#moon")
-          button
-            svg
-              use(xlink:href="../img/sprite.svg#sun")
+      include includes/header
 
       main
-        .about(id="about")
-          .about__left
-            h1.heading-jumbo.typing Hola Mundo...
-            p.paragraph-light
-              | Soy
-              span.heading-1  Francisco J. López,
-              span.heading-1.text-mark  Frontend Developer
-              |  desde el año 2016, fascinado por la magía que hay detrás del código y lo que se puede construir con él, intento poner lo mejor de mí en cada linea, agregando simplicidad y mejora continua.
+        include includes/about
 
-            a.about__download.btn-grad(
-              href="../img/curriculum.pdf"
-              alt="Curriculum"
-              download="curriculum.pdf"
-            ) Descargar CV
+        include includes/stack
 
-          .about__right
-            .about__photo
-              img(src="../img/profile.png" alt="profile")
+        include includes/projects
 
-        .stack(id="stack")
-          h2.heading-3.stack__caption Stack
-
-          .stack__stack
-            .stack__services
-              button.stack__service-name Html
-              button.stack__service-name Semantic Html
-              button.stack__service-name Accessibility
-              button.stack__service-name SEO
-              button.stack__service-name PUG
-
-            .stack__services
-              button.stack__service-name Css
-              button.stack__service-name Responsign Design
-              button.stack__service-name Flexbox
-              button.stack__service-name Grid Layout
-              button.stack__service-name Preprocessors
-              button.stack__service-name Tailwind
-
-            .stack__services
-              button.stack__service-name JavaScript
-              button.stack__service-name TypeScript
-              button.stack__service-name Vue
-               button.stack__service-name React
-
-
-        .projects(id="projects")
-          h2.heading-3.projects__caption Proyectos
-          .projects__cards
-            .card
-              .card__side
-            .card
-              .card__side
-            .card
-              .card__side
-
-      footer(id="contact")
-        h2.heading-3.footer__caption Contacto
+      include includes/footer
