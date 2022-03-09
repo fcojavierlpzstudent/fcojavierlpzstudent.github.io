@@ -1,2 +1,21 @@
 footer(id="contact")
   h2.heading-3.footer__caption Contacto
+  form.form(action="")
+    .form__group
+      input.form__input(
+        type="text"
+        name="email"
+        class="form__input"
+        placeholder="Email"
+        autocomplete="false"
+        required
+      )
+      label.form__label(for="email") Email
+    .form__group
+      textarea.form__textarea(
+        name="message"
+        rows="10"
+        class="form__input"
+        placeholder="Mensaje"
+        required
+      )
