@@ -275,13 +275,14 @@ main {
     @media only screen and (max-width: 48em) {
       .about__left {
         min-inline-size: unset; } }
-  @media only screen and (max-width: 48em) {
-    .about__photo {
-      display: none; } }
-  .about__photo img {
-    max-width: 25rem;
-    border-radius: 5px;
-    box-shadow: 6px 6px 10px 1px var(--color-primary-light); }
+  .about__photo {
+    user-select: none; }
+    @media only screen and (max-width: 48em) {
+      .about__photo {
+        display: none; } }
+    .about__photo img {
+      max-width: 25rem;
+      border-radius: 50%; }
   .about__download {
     align-self: flex-start;
     text-decoration: none; }
@@ -371,12 +372,11 @@ main {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding: 4rem;
   align-items: center; }
   .form .form__group {
     display: flex;
     flex-direction: column;
-    width: 65rem; }
+    width: 80%; }
   .form__input {
     font-size: 1.4rem;
     font-family: inherit;

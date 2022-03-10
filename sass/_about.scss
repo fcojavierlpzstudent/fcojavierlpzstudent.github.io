@@ -19,14 +19,14 @@
   }
 
   &__photo {
+    user-select: none;
     @include respond(phone) {
       display: none;
     }
 
     img {
       max-width: 25rem;
-      border-radius: 5px;
-      box-shadow: 6px 6px 10px 1px var(--color-primary-light);
+      border-radius: 50%;
     }
   }
 
